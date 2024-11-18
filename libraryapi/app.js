@@ -6,7 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var livroRouter = require('./routes/rotaLivro')
+var usuarioRouter = require('./routes/rotaUsuario');
+var emprestimoRouter = require('./routes/rotaEmprestimo')
+var relatorioRouter = require('./routes/rotaRelatorio')
 var app = express();
 
 // view engine setup
@@ -21,6 +24,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/livro', livroRouter);
+app.use('/usuario', usuarioRouter);
+app.use('/emprestimo', emprestimoRouter);
+app.use('/relatorio', relatorioRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,3 +46,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+const { connectDB, sequelize } = require('./config/database');
+
+connectDB();
+
+sequelize.sync({alter:true}).catch((erro)=>console.error(`Erro: ${erro}`))

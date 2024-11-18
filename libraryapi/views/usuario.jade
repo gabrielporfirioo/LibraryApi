@@ -1,0 +1,28 @@
+<!--Forma visual-->
+
+extends layout
+
+block content
+
+    h1 Lista de Usuários
+    ul
+      each usuario in usuarios
+        li #{usuario.id}: #{usuario.nome} (#{usuario.email}) Telefone: #{usuario.telefone}
+
+    h2 Novo Usuário
+    form(action="/usuario" method="POST")
+      label(for="nome") Nome:
+      input(type="text" name="nome" required)
+      br
+      label(for="endereco") Endereço:
+      input(type="text" name="endereco" required)
+      br  
+      label(for="email") Email:
+      input(type="email" name="email" required)
+      br
+
+      label(for="telefone") Telefone:
+      input(type="number" name="telefone" required)
+      br
+
+      button(type="submit") Criar Usuário

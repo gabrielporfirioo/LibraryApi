@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+form{
+  border: 4px grey solid;
+  border-radius: 8px;
+  padding: 8px;
+}
+label{
+  padding-right: 60px;
+  padding-left: 4px;
+  width: 40px;
+  display: inline-block;
+}
+input{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
