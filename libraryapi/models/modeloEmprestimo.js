@@ -1,9 +1,15 @@
-var { DataTypes } = require('sequelize');
+var { DataTypes, Sequelize } = require('sequelize');
 var { sequelize } = require('../config/database');
 var Usuario = require('./modeloUsuario');
 var Livro = require('./modeloLivro');
 
 var Emprestimo = sequelize.define('Emprestimo', {
+    id:{
+        type: Sequelize.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false   
+    },
     usuarioId: {
         type: DataTypes.INTEGER,
         references: {

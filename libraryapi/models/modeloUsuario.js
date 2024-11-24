@@ -1,7 +1,13 @@
-var { DataTypes } = require('sequelize');
+var { DataTypes, Sequelize } = require('sequelize');
 var { sequelize } = require('../config/database');
 
 var Usuario = sequelize.define('Usuario', {
+    id:{
+        type: Sequelize.INTEGER.UNSIGNED,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false   
+    },
     nome:{
         type: DataTypes.STRING,
         allowNull: false
@@ -12,11 +18,13 @@ var Usuario = sequelize.define('Usuario', {
     },
     email: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
     telefone: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        unique: true
     }
 }, {
     tableName: 'usuarios',

@@ -5,7 +5,7 @@ var controladorEmprestimo = require('../controllers/controladorEmprestimo');
 router.post('/', controladorEmprestimo.criarEmprestimo);
 router.get('/', controladorEmprestimo.buscarEmprestimos);
 router.get('/:id', controladorEmprestimo.buscarIdEmprestimo);
-router.put(':id', controladorEmprestimo.atualizarEmprestimo);
+router.put('/:id', controladorEmprestimo.atualizarEmprestimo);
 router.delete('/:id', controladorEmprestimo.removerEmprestimo);
 
 module.exports = router;
