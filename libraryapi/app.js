@@ -47,8 +47,8 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-const { connectDB, sequelize } = require('./config/database');
+const { iniciarDB, sequelize } = require('./config/database');
 
-connectDB();
+iniciarDB();
 
 sequelize.sync({alter:true}).catch((erro)=>console.error(`Erro: ${erro}`))

@@ -11,14 +11,14 @@ var Emprestimo = sequelize.define('Emprestimo', {
         allowNull: false   
     },
     usuarioId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER.UNSIGNED,
         references: {
             model: Usuario,
             key: 'id'
         }
     },
     livroId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER.UNSIGNED,
         references: {
             model: Livro,
             key: 'id'

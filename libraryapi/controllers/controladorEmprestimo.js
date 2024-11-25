@@ -50,7 +50,7 @@ exports.buscarEmprestimos = async (req,res) =>{ //Busca por todos os empréstimo
         });
         res.status(200).json(emprestimos);
       } catch (error) {
-        res.status(400).json({message:'Erro ao buscar os livros. Detalhes do erro: ' +error.message });
+        res.status(400).json({message:'Erro ao buscar os empréstimos. Detalhes do erro: ' +error.message });
       }
 }
 exports.buscarIdEmprestimo = async(req,res)=>{ // Busca um empréstimo pelo Id
@@ -97,19 +97,6 @@ exports.atualizarEmprestimo = async(req,res)=>{ // Atualiza um empréstimo pelo 
 }
 
 exports.removerEmprestimo = async(req,res)=>{ // Remove um empréstimo pelo Id
-    // try {
-    //     var { id } = req.params;
-    //     var emprestimo = await Emprestimo.findByPk(id);
-  
-    //     if (!emprestimo) {
-    //       return res.status(404).json({ error: 'Empréstimo não encontrado' });
-    //     }
-  
-    //     await emprestimo.destroy();
-    //     res.status(200).send();
-    //   } catch (error) {
-    //     res.status(400).json({ error: 'Erro ao excluir empréstimo' });
-    //   }
     try {
       var removido = await Emprestimo.destroy({where:{id:req.params.id}})
       if(removido){
