@@ -98,21 +98,29 @@ push origin minha-nova-funcionalidade
 
 ## Autores
 
-Gabriel Porfírio - @gabriel_porfirioo
-Osvaldo Vasconcelos - @ValdVdC
+1. Gabriel Porfírio - @gabriel_porfirioo
+2. Osvaldo Vasconcelos - @ValdVdC
 
 ## Licença
 Este projeto está licenciado sob a MIT License. Sinta-se à vontade para usar, modificar e compartilhar conforme necessário.
 
 ## Imagens do Projeto
 Exemplo de Requisição:
-[Imagem de exemplo de requisição]
+<br/>
+1. Livros
+<img src="imagens/get_livro.jpg" alt="Todos os Livros">
+<br/>
+<img src="imagens/delete_livro.png" alt="Delete Livros">
+<br/>
+2. Usuários
+<img src="imagens/get_ususario.jpg" alt="Todos os Usuarios">
+<br/>
+3. Relatório
+<img src="imagens/relatorio.jpg" alt="Relatorio">
+<br/>
+<img src="imagens/mais_emprestados.jpg" alt="Livros mais emprestados">
+<br/>
+<img src="imagens/limite_emprestimo.jpg" alt="Limite de emprestimos">
 
-## Fluxo do Sistema:
-[Imagem do fluxo do sistema]
 
-## Estrutura do Banco:
-[Imagem da estrutura do banco]
 
-## Demo:
-[Imagem da demonstração]
