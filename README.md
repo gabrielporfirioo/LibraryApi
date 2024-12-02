@@ -100,6 +100,8 @@ push origin minha-nova-funcionalidade
 
 1. Gabriel Porfírio - @gabriel_porfirioo
 2. Osvaldo Vasconcelos - @ValdVdC
+3. Flávio Vecch - @Fvecch
+4. Ewerton Thyago - @ewertonthyago
 
 ## Licença
 Este projeto está licenciado sob a MIT License. Sinta-se à vontade para usar, modificar e compartilhar conforme necessário.
